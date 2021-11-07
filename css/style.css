@@ -1,42 +1,43 @@
-
-body{
+body {
     margin: 0;
     padding: 0;
-    
     /* to hide the leaking navbar & footer */
     overflow-x: hidden;
-
-    font-family: Helvetica,Arial,sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
 }
+
 
 /* TOP NAVIGATION BAR STARTS */
 
-#navbar{
+#navbar {
     display: flex;
-    gap: 40px;
-
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
     /* to make navbar cling to the top */
     position: sticky;
-
     /* to activate sticky */
     top: 0px;
-
     /* x-shift | y-shift | blur amount | color */
     box-shadow: 1px -80px 100px rgb(94, 94, 94);
-
     background-color: white;
-    padding-left: 30px;
+    padding: 0px 50px;
 }
 
-#navbar img{
+#navbar--left,
+#navbar--right {
+    display: flex;
+    gap: 50px
+}
+
+#navbar img {
     height: 30px;
     padding: 25px;
 }
 
-#menu{
+#menu {
     /* TO AVOID 'HOME& LIVING' FROM WRAPPING */
     white-space: nowrap;
-
     display: inline-flex;
     font-size: 14px;
     font-weight: 530;
@@ -44,43 +45,73 @@ body{
     align-items: center;
 }
 
+#searchbar {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    background-color: rgb(248, 248, 248);
+    height: 40px;
+    width: 500px;
+    border-radius: 5px;
+    padding: 0px 12px;
+}
+
+#searchbar img {
+    width: 21px;
+    height: 21px;
+    padding: 0;
+    color: rgb(61, 61, 39);
+}
+
+#search_field {
+    background-color: rgb(248, 248, 248);
+    flex: 1;
+    border: none;
+}
+
+#search_field:focus {
+    background-color: white;
+    outline: none;
+}
+
+
 /* TOP NAVIGATION BAR ENDS */
+
+
 /* CAROUSEL STARTS */
 
-#carousel{
+#carousel {
     margin-top: 30px;
 }
 
-#carousel_track{
+#carousel_track {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.carousel_slide.visible_slide{
+.carousel_slide.visible_slide {
     display: block;
 }
 
-.carousel_slide.hidden_slide{
+.carousel_slide.hidden_slide {
     display: none;
 }
 
-
-.carousel_image{
+.carousel_image {
     /* to fit carousel_image into parent -carousel_slide */
     width: 100%;
 }
 
-#slide_tracker{
+#slide_tracker {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-.slide_button{
+.slide_button {
     margin-top: 6px;
     border: none;
-
     /* EACH BUTTON TAKES 20% (*5) OF TOTAL WIDTH */
     /* OF PARENT 'CAROUSEL' */
     width: 20%;
@@ -88,45 +119,50 @@ body{
     background-color: rgb(209, 209, 209);
 }
 
-.slide_button.selected{
+.slide_button.selected {
     background-color: rgb(80, 80, 80);
 }
 
-.slide_button.unselected{
+.slide_button.unselected {
     background-color: rgb(209, 209, 209);
 }
 
+
 /* CAROUSEL ENDS */
+
+
 /* EXPLORE SECTION STARTS */
 
-h1{
+h1 {
     font-weight: 500;
     margin: 70px 0px;
     color: #3e4152;
 }
 
-#explore_section{
+#explore_section {
     padding: 35px;
     padding-top: 0;
 }
 
-.cards{
+.cards {
     display: flex;
     margin: 0px 40px;
     gap: 30px;
 }
 
-.card img{
-
+.card img {
     /* to make, image width = width of parent-- card */
     /* card is flex-item child of cards */
     width: 100%;
 }
 
+
 /* EXPLORE SECTION ENDS */
+
+
 /* FOOTER STARTS */
 
-#footer{
+#footer {
     background-color: whitesmoke;
     display: flex;
     flex-flow: row wrap;
@@ -136,77 +172,79 @@ h1{
     color: rgb(133, 133, 133);
 }
 
-._footer_lists{
+._footer_lists {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-._footer_lists li{
+._footer_lists li {
     margin: 5px;
     font-size: 14px;
 }
 
 
 /* list items/children are numbered from 1 to n */
+
 ._footer_lists:first-child li:first-child,
-._footer_lists:nth-child(2) li:first-child{
+._footer_lists:nth-child(2) li:first-child {
     font-size: 10px;
     font-weight: 600;
     color: black;
     margin-bottom: 30px;
 }
 
-#google_play_icon{
+#google_play_icon {
     height: 30px;
 }
 
-#app_store_icon{
+#app_store_icon {
     height: 32px;
 }
 
-.app{
-padding-right: 10px;
+.app {
+    padding-right: 10px;
 }
 
-.app.fb{
+.app.fb {
     width: 17px;
     height: 20px;
 }
 
-.app.insta{
+.app.insta {
     width: 17px;
     height: 20px;
 }
 
-.app.twitter{
+.app.twitter {
     width: 20px;
     height: 20px;
 }
 
-.app.yt{
+.app.yt {
     width: 30px;
     height: 20px;
 }
 
-#original_icon{
+#original_icon {
     width: 60px;
     height: 50px;
 }
 
-#return_icon{
+#return_icon {
     width: 50px;
     height: 50px;
 }
 
-._footer_lists:last-child li:last-child{
+._footer_lists:last-child li:last-child {
     margin: 12px;
     gap: 22px;
 }
 
+
 /* FOOTER ENDS */
 
-#side_banner{
+#side_banner {
     display: inline;
     background-color: rgb(48, 45, 48);
     color: white;
