@@ -1,0 +1,224 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    
+    /* to hide the leaking navbar & footer */
+    overflow-x: hidden;
+
+    font-family: Helvetica,Arial,sans-serif;
+}
+
+/* TOP NAVIGATION BAR STARTS */
+
+#navbar{
+    display: flex;
+    gap: 40px;
+
+    /* to make navbar cling to the top */
+    position: sticky;
+
+    /* to activate sticky */
+    top: 0px;
+
+    /* x-shift | y-shift | blur amount | color */
+    box-shadow: 1px -80px 100px rgb(94, 94, 94);
+
+    background-color: white;
+    padding-left: 30px;
+}
+
+#navbar img{
+    height: 30px;
+    padding: 25px;
+}
+
+#menu{
+    /* TO AVOID 'HOME& LIVING' FROM WRAPPING */
+    white-space: nowrap;
+
+    display: inline-flex;
+    font-size: 14px;
+    font-weight: 530;
+    gap: 35px;
+    align-items: center;
+}
+
+/* TOP NAVIGATION BAR ENDS */
+/* CAROUSEL STARTS */
+
+#carousel{
+    margin-top: 30px;
+}
+
+#carousel_track{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel_slide.visible_slide{
+    display: block;
+}
+
+.carousel_slide.hidden_slide{
+    display: none;
+}
+
+
+.carousel_image{
+    /* to fit carousel_image into parent -carousel_slide */
+    width: 100%;
+}
+
+#slide_tracker{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.slide_button{
+    margin-top: 6px;
+    border: none;
+
+    /* EACH BUTTON TAKES 20% (*5) OF TOTAL WIDTH */
+    /* OF PARENT 'CAROUSEL' */
+    width: 20%;
+    cursor: pointer;
+    background-color: rgb(209, 209, 209);
+}
+
+.slide_button.selected{
+    background-color: rgb(80, 80, 80);
+}
+
+.slide_button.unselected{
+    background-color: rgb(209, 209, 209);
+}
+
+/* CAROUSEL ENDS */
+/* EXPLORE SECTION STARTS */
+
+h1{
+    font-weight: 500;
+    margin: 70px 0px;
+    color: #3e4152;
+}
+
+#explore_section{
+    padding: 35px;
+    padding-top: 0;
+}
+
+.cards{
+    display: flex;
+    margin: 0px 40px;
+    gap: 30px;
+}
+
+.card img{
+
+    /* to make, image width = width of parent-- card */
+    /* card is flex-item child of cards */
+    width: 100%;
+}
+
+/* EXPLORE SECTION ENDS */
+/* FOOTER STARTS */
+
+#footer{
+    background-color: whitesmoke;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 50px 100px;
+    gap: 100px;
+    color: rgb(133, 133, 133);
+}
+
+._footer_lists{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+._footer_lists li{
+    margin: 5px;
+    font-size: 14px;
+}
+
+
+/* list items/children are numbered from 1 to n */
+._footer_lists:first-child li:first-child,
+._footer_lists:nth-child(2) li:first-child{
+    font-size: 10px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 30px;
+}
+
+#google_play_icon{
+    height: 30px;
+}
+
+#app_store_icon{
+    height: 32px;
+}
+
+.app{
+padding-right: 10px;
+}
+
+.app.fb{
+    width: 17px;
+    height: 20px;
+}
+
+.app.insta{
+    width: 17px;
+    height: 20px;
+}
+
+.app.twitter{
+    width: 20px;
+    height: 20px;
+}
+
+.app.yt{
+    width: 30px;
+    height: 20px;
+}
+
+#original_icon{
+    width: 60px;
+    height: 50px;
+}
+
+#return_icon{
+    width: 50px;
+    height: 50px;
+}
+
+._footer_lists:last-child li:last-child{
+    margin: 12px;
+    gap: 22px;
+}
+
+/* FOOTER ENDS */
+
+#side_banner{
+    display: inline;
+    background-color: rgb(48, 45, 48);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 24px 10px;
+    font-weight: bolder;
+    writing-mode: vertical-lr;
+    position: fixed;
+    bottom: 100px;
+    right: 0px;
+    width: 25px;
+    height: 220px;
+    text-align: center;
+}
