@@ -4,11 +4,19 @@ var search_field = document.getElementById('search_field');
 console.log(search_field);
 console.log(search_bar);
 
-var change_searchbar_color = () => {
+search_field.addEventListener('focus', () => {
+    console.log("this");
     search_bar.style.backgroundColor = 'white';
-    search_bar.style.border = '2px red solid';
-}
-search_field.addEventListener('focus', () => change_searchbar_color);
+    search_bar.style.border = '1px rgb(240, 240, 240) solid';
+
+});
+
+search_field.addEventListener('focusout', () => {
+    console.log("this");
+    search_bar.style.cssText = 'background-color = rgb(248, 248, 248);';
+    search_bar.style.border = 'none';
+
+});
 
 
 var slides = document.getElementsByClassName('carousel_slide');
